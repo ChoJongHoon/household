@@ -8,5 +8,9 @@ type HouseholdProps = {
 };
 
 export default function Household({ children }: HouseholdProps) {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <Wrapper>
+      <tbody>{children}</tbody>
+    </Wrapper>
+  );
 }
