@@ -3,7 +3,7 @@
     {
       "date": "20191202",
       "income": 200000,
-      "products": [
+      "expenses": [
         {
           "name": "볼펜",
           "price": 1000,
@@ -29,7 +29,7 @@
     {
       "date": "20191201",
       "income": 300000,
-      "products": [
+      "expenses": [
         {
           "name": "우유",
           "price": 6000,
@@ -52,7 +52,7 @@
     {
       "date": "20191203",
       "income": 2000000,
-      "products": [
+      "expenses": [
         {
           "name": "인형",
           "price": 10000,

@@ -13,9 +13,9 @@ function App() {
             index={idx + 1}
             date={daily.date}
             income={daily.income}
-            total={daily.products.reduce((acc, cur) => acc + cur.price, 0)}
+            total={daily.expenses.reduce((acc, cur) => acc + cur.price, 0)}
           >
-            {daily.products.map((product, idx) => (
+            {daily.expenses.map((expense, idx) => (
               <tr key={idx}>
                 <td>1</td>
                 <td>2</td>

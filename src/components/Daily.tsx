@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import formatDate from "../lib/formatDate";
+import formatMoney from "../lib/formatMoney";
 
 const IndexTd = styled.td`
   background: #0000ff;
@@ -34,13 +36,13 @@ export default function Daily({
   children
 }: DailyProps) {
   return (
-    <>
+    <tbody>
       <tr>
         <IndexTd rowSpan={children.length + 5}>{index}</IndexTd>
-        <GreenTd align="center">날짜:{date}</GreenTd>
+        <GreenTd align="center">날짜:{formatDate(date)}</GreenTd>
         <GreenTd align="center">수입</GreenTd>
         <GreenTd align="left" colSpan={2}>
-          {income}
+          {formatMoney(income)}
         </GreenTd>
       </tr>
       <tr>
@@ -59,15 +61,15 @@ export default function Daily({
       <tr>
         <LimeTd align="center">총지출</LimeTd>
         <LimeTd align="left" colSpan={3}>
-          {total}
+          {formatMoney(total)}
         </LimeTd>
       </tr>
       <tr>
         <LimeTd align="center">잔액</LimeTd>
         <LimeTd align="left" colSpan={3}>
-          {income - total}
+          {formatMoney(income - total)}
         </LimeTd>
       </tr>
-    </>
+    </tbody>
   );
 }

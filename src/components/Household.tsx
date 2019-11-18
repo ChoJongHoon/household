@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.table``;
+const Wrapper = styled.table`
+  /* Todo: css 추가 */
+`;
 
 type HouseholdProps = {
   children: JSX.Element[];
@@ -10,7 +12,8 @@ type HouseholdProps = {
 export default function Household({ children }: HouseholdProps) {
   return (
     <Wrapper>
-      <tbody>{children}</tbody>
+      <caption>가계부</caption>
+      {children}
     </Wrapper>
   );
 }
