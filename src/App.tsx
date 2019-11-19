@@ -1,5 +1,7 @@
 import React from "react";
 import { data } from "./lib/data.json";
+
+// components
 import Household from "./components/Household";
 import Daily from "./components/Daily";
 import Expense from "./components/Expense";

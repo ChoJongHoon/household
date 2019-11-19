@@ -14,9 +14,13 @@ const GreenTd = styled.td`
   text-align: ${props => props.align};
 `;
 
-const LimeTd = styled.td`
+type LimeTdPropsType = {
+  minus?: boolean;
+};
+
+const LimeTd = styled.td<LimeTdPropsType>`
   background: #bfff00;
-  color: #000000;
+  color: ${props => (props.minus ? "#FF0000" : "#000000")};
   text-align: ${props => props.align};
 `;
 
@@ -66,7 +70,8 @@ export default function Daily({
       </tr>
       <tr>
         <LimeTd align="center">잔액</LimeTd>
-        <LimeTd align="left" colSpan={3}>
+        <LimeTd align="left" colSpan={3} minus={income < total}>
+          {income < total ? "[적자]" : null}
           {formatMoney(income - total)}
         </LimeTd>
       </tr>
