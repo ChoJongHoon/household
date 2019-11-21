@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.table`
-  /* Todo: css 추가 */
+const Wrapper = styled.div`
+  flex: 1;
+`;
+
+const HouseholdTable = styled.table`
+  width: 100%;
 `;
 
 type HouseholdProps = {
@@ -12,8 +16,10 @@ type HouseholdProps = {
 export default function Household({ children }: HouseholdProps) {
   return (
     <Wrapper>
-      <caption>가계부</caption>
-      {children}
+      <HouseholdTable>
+        <caption>가계부</caption>
+        {children}
+      </HouseholdTable>
     </Wrapper>
   );
 }

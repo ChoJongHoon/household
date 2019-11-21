@@ -1,12 +1,20 @@
-import React from "react";
-import { data } from "./lib/data.json";
+import React, { useState } from "react";
+import { data as initialData } from "./lib/data.json";
+import styled from "styled-components";
 
 // components
 import Household from "./components/Household";
 import Daily from "./components/Daily";
 import Expense from "./components/Expense";
+import Form from "./components/Form";
+
+const Container = styled.div`
+  display: flex;
+`;
 
 function App() {
+  const [data, setData] = useState(initialData);
+
   const sortedData = data
     .sort((a, b) => {
       // 날짜별 정렬
@@ -28,27 +36,30 @@ function App() {
     });
 
   return (
-    <Household>
-      {sortedData.map((daily, idx) => (
-        <Daily
-          key={idx}
-          index={idx + 1}
-          date={daily.date}
-          income={daily.income}
-          total={daily.expenses.reduce((acc, cur) => acc + cur.price, 0)}
-        >
-          {daily.expenses.map((expense, idx) => (
-            <Expense
-              key={idx}
-              index={idx + 1}
-              name={expense.name}
-              price={expense.price}
-              place={expense.place}
-            />
-          ))}
-        </Daily>
-      ))}
-    </Household>
+    <Container>
+      <Household>
+        {sortedData.map((daily, idx) => (
+          <Daily
+            key={idx}
+            index={idx + 1}
+            date={daily.date}
+            income={daily.income}
+            total={daily.expenses.reduce((acc, cur) => acc + cur.price, 0)}
+          >
+            {daily.expenses.map((expense, idx) => (
+              <Expense
+                key={idx}
+                index={idx + 1}
+                name={expense.name}
+                price={expense.price}
+                place={expense.place}
+              />
+            ))}
+          </Daily>
+        ))}
+      </Household>
+      <Form data={data} setData={setData} />
+    </Container>
   );
 }
 
