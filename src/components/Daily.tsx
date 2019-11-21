@@ -19,7 +19,7 @@ type LimeTdPropsType = {
 };
 
 const LimeTd = styled.td<LimeTdPropsType>`
-  background: #bfff00;
+  background: #a3dd08;
   color: ${props => (props.minus ? "#FF0000" : "#000000")};
   text-align: ${props => props.align};
 `;
