@@ -30,6 +30,7 @@ type Data = {
   date: string;
   income: number;
   expenses: {
+    id: number;
     name: string;
     price: number;
     place: string;
@@ -67,6 +68,14 @@ export default function Form({ data, setData }: FormProps) {
 
     const selectDataIndex = data.findIndex(daily => daily.date === strDate);
 
+    const maxId = data.reduce((acc, daily) => {
+      const maxDailyId = daily.expenses.reduce(
+        (acc, expense) => (expense.id > acc ? expense.id : acc),
+        0
+      );
+      return acc > maxDailyId ? acc : maxDailyId;
+    }, 0);
+
     if (selectDataIndex === -1) {
       setData([
         ...data,
@@ -75,6 +84,7 @@ export default function Form({ data, setData }: FormProps) {
           income: 0,
           expenses: [
             {
+              id: maxId + 1,
               name,
               price: Number(price),
               place
@@ -85,7 +95,12 @@ export default function Form({ data, setData }: FormProps) {
     } else {
       const filteredData = data.filter(daily => daily.date !== strDate);
       const selectData = data[selectDataIndex];
-      selectData.expenses.push({ name, price: Number(price), place });
+      selectData.expenses.push({
+        id: maxId + 1,
+        name,
+        price: Number(price),
+        place
+      });
       setData([...filteredData, selectData]);
     }
     setName("");

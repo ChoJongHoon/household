@@ -6,6 +6,7 @@ import formatMoney from "../lib/formatMoney";
 const IndexTd = styled.td`
   background: #0000ff;
   color: #ffffff;
+  text-align: center;
 `;
 
 const GreenTd = styled.td`

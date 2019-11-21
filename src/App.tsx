@@ -35,6 +35,17 @@ function App() {
       };
     });
 
+  const handleRemove = (id: number): void => {
+    const removedData = data.map(daily => {
+      return {
+        ...daily,
+        expenses: daily.expenses.filter(expense => expense.id !== id)
+      };
+    });
+
+    setData(removedData);
+  };
+
   return (
     <Container>
       <Household>
@@ -49,10 +60,12 @@ function App() {
             {daily.expenses.map((expense, idx) => (
               <Expense
                 key={idx}
+                id={expense.id}
                 index={idx + 1}
                 name={expense.name}
                 price={expense.price}
                 place={expense.place}
+                onRemove={handleRemove}
               />
             ))}
           </Daily>
