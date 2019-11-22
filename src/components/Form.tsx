@@ -77,7 +77,7 @@ export default function Form({ data, setData }: FormProps) {
     }, 0);
 
     if (selectDataIndex === -1) {
-      setData([
+      const addedData = [
         ...data,
         {
           date: strDate,
@@ -91,7 +91,9 @@ export default function Form({ data, setData }: FormProps) {
             }
           ]
         }
-      ]);
+      ];
+      localStorage.setItem("data", JSON.stringify(addedData));
+      setData(addedData);
     } else {
       const filteredData = data.filter(daily => daily.date !== strDate);
       const selectData = data[selectDataIndex];
@@ -101,6 +103,10 @@ export default function Form({ data, setData }: FormProps) {
         price: Number(price),
         place
       });
+      localStorage.setItem(
+        "data",
+        JSON.stringify([...filteredData, selectData])
+      );
       setData([...filteredData, selectData]);
     }
     setName("");

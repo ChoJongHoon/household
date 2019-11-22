@@ -13,7 +13,20 @@ const Container = styled.div`
 `;
 
 function App() {
-  const [data, setData] = useState(initialData);
+  const localData = localStorage.getItem("data");
+  type dataType = {
+    date: string;
+    income: number;
+    expenses: {
+      id: number;
+      name: string;
+      price: number;
+      place: string;
+    }[];
+  }[];
+  const getData: dataType = localData ? JSON.parse(localData) : initialData;
+  const [data, setData] = useState(getData);
+  const [modify, setModify] = useState();
 
   const sortedData = data
     .sort((a, b) => {
@@ -42,8 +55,21 @@ function App() {
         expenses: daily.expenses.filter(expense => expense.id !== id)
       };
     });
-
+    localStorage.setItem("data", JSON.stringify(removedData));
     setData(removedData);
+  };
+
+  const handleModify = (index: number, income: number): void => {
+    const modifiedData = data.map((daily, idx) =>
+      idx !== index - 1
+        ? daily
+        : {
+            ...daily,
+            income
+          }
+    );
+    localStorage.setItem("data", JSON.stringify(modifiedData));
+    setData(modifiedData);
   };
 
   return (
@@ -56,6 +82,9 @@ function App() {
             date={daily.date}
             income={daily.income}
             total={daily.expenses.reduce((acc, cur) => acc + cur.price, 0)}
+            modify={modify === idx + 1}
+            setModify={setModify}
+            onModify={handleModify}
           >
             {daily.expenses.map((expense, idx) => (
               <Expense
