@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/household/static/css/main.34de6062.chunk.css",
-    "main.js": "/household/static/js/main.6368360b.chunk.js",
-    "main.js.map": "/household/static/js/main.6368360b.chunk.js.map",
+    "main.js": "/household/static/js/main.78c39835.chunk.js",
+    "main.js.map": "/household/static/js/main.78c39835.chunk.js.map",
     "runtime-main.js": "/household/static/js/runtime-main.0d8ace00.js",
     "runtime-main.js.map": "/household/static/js/runtime-main.0d8ace00.js.map",
-    "static/js/2.3edb083c.chunk.js": "/household/static/js/2.3edb083c.chunk.js",
-    "static/js/2.3edb083c.chunk.js.map": "/household/static/js/2.3edb083c.chunk.js.map",
+    "static/js/2.110969e7.chunk.js": "/household/static/js/2.110969e7.chunk.js",
+    "static/js/2.110969e7.chunk.js.map": "/household/static/js/2.110969e7.chunk.js.map",
     "index.html": "/household/index.html",
-    "precache-manifest.82042acf59f48ada6bc333336567c513.js": "/household/precache-manifest.82042acf59f48ada6bc333336567c513.js",
+    "precache-manifest.5954e041e11976a4cb691f928494e2d4.js": "/household/precache-manifest.5954e041e11976a4cb691f928494e2d4.js",
     "service-worker.js": "/household/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/household/static/css/main.34de6062.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.0d8ace00.js",
-    "static/js/2.3edb083c.chunk.js",
+    "static/js/2.110969e7.chunk.js",
     "static/css/main.34de6062.chunk.css",
-    "static/js/main.6368360b.chunk.js"
+    "static/js/main.78c39835.chunk.js"
   ]
 }
