@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b0fdf7411a147bce0a8b3998f53696f",
+    "revision": "69e5b82ec3f2835d3da5a486325f3cad",
     "url": "/household/index.html"
   },
   {
-    "revision": "bd59254de090f6474f19",
+    "revision": "2b55977c05e3187396ff",
     "url": "/household/static/css/main.34de6062.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/household/static/js/2.110969e7.chunk.js"
   },
   {
-    "revision": "bd59254de090f6474f19",
-    "url": "/household/static/js/main.78c39835.chunk.js"
+    "revision": "2b55977c05e3187396ff",
+    "url": "/household/static/js/main.d6773761.chunk.js"
   },
   {
     "revision": "b04bbdaffc71eed33a1a",

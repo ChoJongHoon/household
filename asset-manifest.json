@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/household/static/css/main.34de6062.chunk.css",
-    "main.js": "/household/static/js/main.78c39835.chunk.js",
-    "main.js.map": "/household/static/js/main.78c39835.chunk.js.map",
+    "main.js": "/household/static/js/main.d6773761.chunk.js",
+    "main.js.map": "/household/static/js/main.d6773761.chunk.js.map",
     "runtime-main.js": "/household/static/js/runtime-main.0d8ace00.js",
     "runtime-main.js.map": "/household/static/js/runtime-main.0d8ace00.js.map",
     "static/js/2.110969e7.chunk.js": "/household/static/js/2.110969e7.chunk.js",
     "static/js/2.110969e7.chunk.js.map": "/household/static/js/2.110969e7.chunk.js.map",
     "index.html": "/household/index.html",
-    "precache-manifest.5954e041e11976a4cb691f928494e2d4.js": "/household/precache-manifest.5954e041e11976a4cb691f928494e2d4.js",
+    "precache-manifest.e81b9ec2bda6a1579729c26f29b5f0b3.js": "/household/precache-manifest.e81b9ec2bda6a1579729c26f29b5f0b3.js",
     "service-worker.js": "/household/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/household/static/css/main.34de6062.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.0d8ace00.js",
     "static/js/2.110969e7.chunk.js",
     "static/css/main.34de6062.chunk.css",
-    "static/js/main.78c39835.chunk.js"
+    "static/js/main.d6773761.chunk.js"
   ]
 }
