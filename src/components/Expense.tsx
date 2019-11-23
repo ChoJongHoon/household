@@ -44,7 +44,7 @@ export default function Expense({
     <Wrapper>
       <YellowTd align="center">{formatRoman(index)}.</YellowTd>
       <YellowTd align="left">{name}</YellowTd>
-      <YellowTd align="left">{formatMoney(price)}</YellowTd>
+      <YellowTd align="right">{formatMoney(price)}</YellowTd>
       <YellowTd align="left">
         {place}
         <RemoveButton onClick={() => onRemove(id)}>&times;</RemoveButton>

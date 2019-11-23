@@ -96,8 +96,13 @@ export default function Daily({
             />
           ) : (
             <>
-              {formatMoney(income)}{" "}
-              <ModifyButton onClick={() => setModify(index)}>
+              {formatMoney(income)}
+              <ModifyButton
+                onClick={() => {
+                  setIncomeValue(String(income));
+                  setModify(index);
+                }}
+              >
                 <EditIcon style={{ fontSize: 14 }} />
               </ModifyButton>
             </>
